@@ -1,7 +1,7 @@
 package random;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import random.MergeSortedArray;
 
 import java.util.Arrays;
 
@@ -9,9 +9,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MergeSortedArrayTest {
 
+    MergeSortedArray mergeSortedArray;
+
+    @BeforeEach
+    public void setUpOnce() {
+        // One time initialization.
+        mergeSortedArray = new MergeSortedArray();
+
+    }
+
     @Test
     public void testA() {
-        MergeSortedArray mergeSortedArray = new MergeSortedArray();
         int[] a = {1, 4, 7, 0};
         int[] b = {5};
         int m = 3;
@@ -21,7 +29,6 @@ public class MergeSortedArrayTest {
 
     @Test
     public void testB() {
-        MergeSortedArray mergeSortedArray = new MergeSortedArray();
         int[] a = {0};
         int[] b = {};
         int m = 1;
@@ -31,7 +38,6 @@ public class MergeSortedArrayTest {
 
     @Test
     public void testC() {
-        MergeSortedArray mergeSortedArray = new MergeSortedArray();
         int[] a = {};
         int[] b = {};
         int m = 0;
@@ -41,7 +47,6 @@ public class MergeSortedArrayTest {
 
     @Test
     public void testD() {
-        MergeSortedArray mergeSortedArray = new MergeSortedArray();
         int[] a = {1, 4, 7, 322, 678, 878, 0, 0, 0, 0, 0, 0, 0};
         int[] b = {34, 74, 87, 90, 98, 232, 373};
         int m = 6;
